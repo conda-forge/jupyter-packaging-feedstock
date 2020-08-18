@@ -5,7 +5,7 @@ Home: https://github.com/jupyter/jupyter-packaging
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Jupyter Packaging Utilities
 
