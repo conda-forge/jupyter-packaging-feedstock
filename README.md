@@ -5,9 +5,11 @@ Home: https://github.com/jupyter/jupyter-packaging
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-packaging-feedstock/blob/master/LICENSE.txt)
 
 Summary: Jupyter Packaging Utilities
+
+Development: https://github.com/jupyter/jupyter-packaging
 
 Jupyter Packaging Utilities
 
