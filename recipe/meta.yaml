@@ -22,7 +22,7 @@ requirements:
     - python >=3.6
     - packaging
     - tomlkit
-    - setuptools>=46.4.0
+    - setuptools >=46.4.0
     - wheel
     - deprecation
 
