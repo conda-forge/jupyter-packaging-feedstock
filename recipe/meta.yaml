@@ -1,26 +1,30 @@
 {% set name = "jupyter-packaging" %}
-{% set version = "0.7.12" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b140325771881a7df7b7f2d14997b619063fe75ae756b9025852e4346000bbb8
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_packaging-{{ version }}.tar.gz
+  sha256: e9c0c36520d6b52ffc29f1355c66d39c7acb2ca5a6a92ff3175bc4e18f56448f
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
-    - setuptools
+    - python >=3.6
+    - packaging
+    - tomlkit
+    - setuptools >=46.4.0
+    - wheel
+    - deprecation
 
 test:
   imports:
@@ -42,3 +46,4 @@ extra:
     - blink1073
     - vidartf
     - timkpaine
+    - xmnlab
