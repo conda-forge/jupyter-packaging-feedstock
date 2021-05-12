@@ -1,5 +1,5 @@
 {% set name = "jupyter-packaging" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_packaging-{{ version }}.tar.gz
-  sha256: b3fb2cb0049fa3b974e08b67b0f65504d31dc4a7f131275e52e9f91c19125777
+  sha256: 8845f486dd48c1660cfad18e5091d1c03540eb2e9fbf3cecf21ecb22b69b8770
 
 build:
   number: 0
