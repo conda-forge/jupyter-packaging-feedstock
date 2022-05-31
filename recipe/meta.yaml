@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - packaging
   run:
-    - python >=3.6
+    - python >=3.7
     - packaging
     - tomlkit
-    - setuptools >=46.4.0
+    - setuptools >=60.2.0
     - wheel
     - deprecation
 
