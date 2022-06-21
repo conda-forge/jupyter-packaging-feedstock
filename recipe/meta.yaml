@@ -19,6 +19,8 @@ requirements:
     - python >=3.6
     - pip
     - packaging
+  build:
+    - hatchling
   run:
     - python >=3.6
     - packaging
