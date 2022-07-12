@@ -33,6 +33,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter--packaging-green.svg)](https://anaconda.org/conda-forge/jupyter-packaging) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter-packaging.svg)](https://anaconda.org/conda-forge/jupyter-packaging) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter-packaging.svg)](https://anaconda.org/conda-forge/jupyter-packaging) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter-packaging.svg)](https://anaconda.org/conda-forge/jupyter-packaging) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyter_packaging-green.svg)](https://anaconda.org/conda-forge/jupyter_packaging) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyter_packaging.svg)](https://anaconda.org/conda-forge/jupyter_packaging) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyter_packaging.svg)](https://anaconda.org/conda-forge/jupyter_packaging) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyter_packaging.svg)](https://anaconda.org/conda-forge/jupyter_packaging) |
 
 Installing jupyter-packaging
 ============================
@@ -44,16 +45,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyter-packaging` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jupyter-packaging, jupyter_packaging` can be installed with `conda`:
 
 ```
-conda install jupyter-packaging
+conda install jupyter-packaging jupyter_packaging
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupyter-packaging
+mamba install jupyter-packaging jupyter_packaging
 ```
 
 It is possible to list all of the versions of `jupyter-packaging` available on your platform with `conda`:
