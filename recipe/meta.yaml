@@ -10,7 +10,7 @@ source:
   sha256: 0b99eaecf56b9d1d99e7bcb6632d914a8ea5698da40b238ba89227a34157de32
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
@@ -31,6 +31,18 @@ requirements:
 test:
   imports:
     - jupyter_packaging
+
+
+outputs:
+  - name: jupyter-packaging
+  - name: jupyter_packaging
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python
+      run:
+        - {{ pin_subpackage("jupyter-packaging", exact=True) }}
 
 about:
   home: https://github.com/jupyter/jupyter-packaging
