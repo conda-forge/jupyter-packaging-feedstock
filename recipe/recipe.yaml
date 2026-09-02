@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  name: jupyter-packaging
+  version: "0.12.3"
+
+recipe:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/jupyter_packaging-${{ version }}.tar.gz
+  sha256: 9d9b2b63b97ffd67a8bc5391c32a421bc415b264a32c99e4d8d8dd31daae9cf4
+
+build:
+  number: 3
+
+outputs:
+  - package:
+      name: jupyter-packaging
+    build:
+      noarch: python
+      script: ${{ PYTHON }} -m pip install . -vv --no-deps
+    requirements:
+      build:
+        - if: build_platform != target_platform
+          then: python
+        - if: build_platform != target_platform
+          then: cross-python_${{ target_platform }}
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - packaging
+        - hatchling
+      run:
+        - python >=${{ python_min }}
+        - packaging
+        - tomlkit
+        - setuptools >=60.2.0
+        - wheel
+        - deprecation
+    tests:
+      - python:
+          imports:
+            - jupyter_packaging
+          python_version:
+            - ${{ python_min }}.*
+
+  - package:
+      name: jupyter_packaging
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+      run:
+        - ${{ pin_subpackage("jupyter-packaging", exact=True) }}
+
+about:
+  homepage: https://github.com/jupyter/jupyter-packaging
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Jupyter Packaging Utilities
+  description: Jupyter Packaging Utilities
+  repository: https://github.com/jupyter/jupyter-packaging
+
+extra:
+  feedstock-name: jupyter-packaging
+  recipe-maintainers:
+    - blink1073
+    - vidartf
+    - timkpaine
+    - xmnlab
